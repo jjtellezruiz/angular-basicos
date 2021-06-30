@@ -1,0 +1,23 @@
+<h3>Agregar</h3>
+<hr>
+<!-- 
+Se usa ngSubmit para no recargar toda la pagina. 
+Se usa [ngModel]   para one way dataBinding. de TS a HTML.
+Se usa [(ngModel)] para two way databinding. de TS a HTML y HTML a TS
+Al usar ngModel, es obligatorio poner el atributo name para bindear la propiedad
+-->
+<form (ngSubmit)="agregar()">
+    <input 
+        type="text"
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    />
+    <input 
+        type="number"
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+    />
+    <button type="submit">Agregar</button>
+</form>
